@@ -9,6 +9,7 @@ export function createCarousel(imageNodes) {
         const desc = document.createElement("div")
         desc.classList.add("menu-card-desc")
         const descHeader = document.createElement("h1")
+        descHeader.innerText = "Cyber dish"
         descHeader.classList.add("menu-card-header")
         const descContent = document.createElement("h4")
         descContent.classList.add("menu-card-content")
