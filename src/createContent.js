@@ -1,3 +1,5 @@
+import cocktail from "./assets/images/cocktail-1.png"
+import logo from "./assets/images/neon-logo.png"
 const contentDiv = document.querySelector("#content")
 
 export function createMenu() {
@@ -23,8 +25,8 @@ export function createHome() {
     firstImg.id = "cocktail"
     const secondImg = document.createElement("img")
     secondImg.id = "neon-logo"
-    firstImg.setAttribute("src", "./assets/images/cocktail-1.png")
-    secondImg.setAttribute("src", "./assets/images/neon-logo.png")
+    firstImg.src = cocktail
+    secondImg.src = logo
     // Append all elements to the DOM
     imgCard.append(firstImg, secondImg)
     main.append(descCard, imgCard)
