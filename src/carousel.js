@@ -1,7 +1,8 @@
 export function createCarousel(imageNodes) {
     const carouselWrapper = document.createElement("div")
+    carouselWrapper.classList.add("carousel")
     const cards = []
-    
+
     imageNodes.forEach(img => {
         const card = document.createElement("div")
         card.classList.add("menu-card")
@@ -14,39 +15,48 @@ export function createCarousel(imageNodes) {
         desc.append(descHeader, descContent)
         card.append(img, desc)
         cards.push(card)
+        card.ondragstart = function () {
+            return false;
+        };
     });
 
     cards.forEach(card => carouselWrapper.append(card))
 
-    let isDown = false
-    let startX
-    let scrollLeft
+    let startX;
+    let isDown = false;
+    let scrollLeft;
 
-    carouselWrapper.addEventListener("pointerdown", () => {
-        isDown = true
-        carouselWrapper.classList.add("active-slider")
-        startX = e.pageX - carouselWrapper.offsetLeft;
+
+    carouselWrapper.addEventListener("mousedown", (e) => mouseIsDown(e));
+    carouselWrapper.addEventListener("mouseup", (e) => mouseUp(e));
+    carouselWrapper.addEventListener("mouseleave", (e) => mouseLeave(e));
+    carouselWrapper.addEventListener("mousemove", (e) => mouseMove(e));
+
+    function mouseIsDown(e) {
+        isDown = true;
+        startX = e.pageX
         scrollLeft = carouselWrapper.scrollLeft;
-    })
-
-    carouselWrapper.addEventListener('mouseleave', () => {
+        carouselWrapper.classList.add("active-slider")
+    }
+    function mouseUp(e) {
         isDown = false;
-        carouselWrapper.classList.remove("active-slider");
-    });
-
-    carouselWrapper.addEventListener("pointerup", () => {
+        carouselWrapper.classList.remove("active-slider")
+    }
+    function mouseLeave(e) {
         isDown = false;
-        carouselWrapper.classList.remove("active-slider");
-    });
+        carouselWrapper.classList.remove("active-slider")
+    }
+    function mouseMove(e) {
+        if (isDown) {
+            e.preventDefault();
+            const x = e.pageX
+            const walkX = (x - startX) * 3;
+            carouselWrapper.scrollLeft = scrollLeft - walkX; // Базовое scrollLeft + смещение
+            console.log({ x, startX, walkX, scrollLeft, scrollLeftW: carouselWrapper.scrollLeft });
 
-    carouselWrapper.addEventListener("pointermove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carouselWrapper.offsetLeft;
-        const SCROLL_SPEED = 3;
-        const walk = (x - startX) * SCROLL_SPEED;
-        carouselWrapper.scrollLeft = scrollLeft - walk;
-    });
+        }
+    }
+
 
     return carouselWrapper
 }
