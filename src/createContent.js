@@ -25,6 +25,7 @@ export function createHome() {
     secondImg.id = "neon-logo"
     firstImg.setAttribute("src", "./assets/images/cocktail-1.png")
     secondImg.setAttribute("src", "./assets/images/neon-logo.png")
+    // Append all elements to the DOM
     imgCard.append(firstImg, secondImg)
     main.append(descCard, imgCard)
     contentDiv.append(main)
