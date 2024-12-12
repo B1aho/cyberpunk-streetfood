@@ -25,11 +25,10 @@ export const navTabs = {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-    navTabs.currentPage = createHome()
+    createHome()
     const keys = Object.keys(navTabs)
     keys.forEach(key => {
         navTabs[key].ref = document.querySelector(`#${key}`)
         navTabs[key].ref.addEventListener("click", navTabs[key].onClick)
     })
-    
 })
