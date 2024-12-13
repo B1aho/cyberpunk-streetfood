@@ -58,7 +58,8 @@ body {
 
 #home-main {
   display: flex;
-  max-height: 70vh;
+  max-height: 100vh;
+  overflow-y: hidden;
 }
 
 .home-images {
@@ -80,18 +81,18 @@ body {
 }
 
 #cocktail {
-  /* position: relative; 
-  bottom: 140%; 
-  left: 30%;
-  width: 65%; */
-  rotate: 20deg;
+  position: relative;  
+  left: 50%;
+  bottom: 30%;
+  width: 50%;
+  rotate: 25deg;
   z-index: -1;
 }
 
 #neon-logo {
-  /* position: relative;
-  top: -35%;
-  left: -15%;  */
+  position: relative;
+  top: -5%;
+  left: -5%;  
   rotate: -5deg;
 }
 
