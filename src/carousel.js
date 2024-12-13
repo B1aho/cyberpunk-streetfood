@@ -1,31 +1,11 @@
-export function createCarousel(imageNodes) {
+export function createCarousel(cards) {
     const carouselWrapper = document.createElement("div")
     carouselWrapper.classList.add("carousel")
-    const cards = []
-
-    imageNodes.forEach(img => {
-        const card = document.createElement("div")
-        card.classList.add("menu-card")
-        const desc = document.createElement("div")
-        desc.classList.add("menu-card-desc")
-        const descHeader = document.createElement("h1")
-        descHeader.classList.add("menu-card-header")
-        const descContent = document.createElement("h4")
-        descContent.classList.add("menu-card-content")
-        desc.append(descHeader, descContent)
-        card.append(img, desc)
-        cards.push(card)
-        card.ondragstart = function () {
-            return false;
-        };
-    });
-
     cards.forEach(card => carouselWrapper.append(card))
 
     let startX;
     let isDown = false;
     let scrollLeft;
-
 
     carouselWrapper.addEventListener("mousedown", (e) => mouseIsDown(e));
     carouselWrapper.addEventListener("mouseup", (e) => mouseUp(e));

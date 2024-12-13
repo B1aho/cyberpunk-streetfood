@@ -82,7 +82,11 @@ body {
 }
 
 .menu-card-header {
-  min-height: 300px;
+  color: aliceblue;
+  text-align: center;
+}
+
+.menu-card-content {
   color: aliceblue;
   text-align: center;
 }
