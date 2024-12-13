@@ -163,6 +163,10 @@ nav button.active {
   text-align: center;
 }
 
+.home-description h1 {
+  text-shadow: var(--neon-shadow);
+}
+
 .home-description p {
   text-align: center;
   max-width: 80%;
@@ -351,6 +355,27 @@ nav button.active {
   width: 10vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+#submit {
+  font-weight: 400;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: aliceblue;
+  border: none;
+}
+
+#submit:active {
+  cursor: pointer;
+  scale: 1.1;
+  color: #ff2579;
+}
+
+#submit:hover {
+  cursor: pointer;
+  color: #ff2579;
 }
 
 hr {

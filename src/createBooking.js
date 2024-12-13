@@ -100,6 +100,8 @@ const createOrderForm = () => {
   const button = document.createElement("button")
   button.textContent = "Submit!"
   button.type = "submit"
+  button.id = "submit"
+  
   form.onsubmit = (e) => {
     return false
   }
