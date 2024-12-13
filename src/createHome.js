@@ -1,6 +1,6 @@
 import { removePrevPage } from "./removePrevPage";
 
-import cocktail from "./assets/images/cocktail-1.png";
+import cocktail from "./assets/images/soda-2.png";
 import logo from "./assets/images/neon-logo.png";
 
 export function createHome() {
@@ -15,7 +15,9 @@ export function createHome() {
     const descCard = document.createElement("div")
     descCard.classList.add("home-description")
     const header = document.createElement("h1")
-    header.innerText = "Neon Grill: Feeding the Future Since 2088"
+    header.innerText = "Neon Grill"
+    const secondHeader = document.createElement("h2")
+    secondHeader.innerText = "Feeding The Future Since 2088"
     const description = document.createElement("p")
     description.innerText = "Neon Grill is more than just street food; it's a culinary rebellion against the mundane.\n\
      Born in the heart of the neon jungle, we fuse the grit of back-alley diners with the tech of tomorrow. Our chefs? \
@@ -25,7 +27,7 @@ export function createHome() {
      perfect meal to light up your circuits. Burgers that pulse with flavor, wraps that pack a punch, and \
      drinks that electrify your senses—this is street food redefined.\nPlug in. Power up. Bite down.\n\
      Welcome to Neon Grill, where the future tastes better."
-    descCard.append(header, description)
+    descCard.append(header, secondHeader, description)
     // Create vibe image
     const imgCard = document.createElement("div")
     imgCard.classList.add("home-images")
@@ -36,7 +38,7 @@ export function createHome() {
     firstImg.src = cocktail
     secondImg.src = logo
     // Append all elements to the DOM
-    imgCard.append(firstImg, secondImg)
-    main.append(descCard, imgCard)
+    imgCard.append(secondImg, firstImg)
+    main.append(imgCard, descCard)
     contentDiv.append(main)
 };

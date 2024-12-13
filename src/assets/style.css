@@ -55,6 +55,27 @@ body {
 :root { 
 }
 
+#home-main {
+  display: flex;
+}
+
+.home-description h1, .home-description h2 {
+  text-align: center;
+}
+
+#cocktail {
+  position: relative;
+  bottom: 40%;
+  width: 80%;
+  rotate: 20deg;
+}
+
+#neon-logo {
+  position: relative;
+  top: -15%;
+  left: -10%;
+}
+
 .carousel {
   scroll-behavior: smooth;
 	padding: 2rem;
