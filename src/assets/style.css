@@ -103,6 +103,11 @@ nav button {
 nav button:hover {
   cursor: pointer;
   scale: 1.1;
+  color: #ff2579;
+}
+
+nav button.active {
+  color: #ff2579;
 }
 
 #home-main {
@@ -366,6 +371,11 @@ hr {
 
 #about-wrap h1 {
   text-shadow: var(--neon-shadow);
+  padding-bottom: 2%;
+}
+
+#about-wrap h3 {
+  padding-bottom: 2%;
 }
 
 #warning-p {

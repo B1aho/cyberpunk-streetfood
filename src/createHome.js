@@ -3,11 +3,13 @@ import { hr } from "./hr";
 
 import cocktail from "./assets/images/soda-2.png";
 import logo from "./assets/images/neon-logo.png";
+import { highlight } from "./buttonHighlight";
 
-export function createHome() {
+export function createHome(e) {
     if (document.querySelector("#home-main"))
         return
-    
+    if (e)
+        highlight(e.target)
     const contentDiv = document.querySelector("#content")
     removePrevPage()
     const main = document.createElement("div")

@@ -1,5 +1,6 @@
 import { createCarousel } from "./carousel";
 import { removePrevPage } from "./removePrevPage";
+import { highlight } from "./buttonHighlight";
 
 import burger1 from "./assets/images/carousel/burger1.jpg";
 import burger2 from "./assets/images/carousel/burger2.jpg";
@@ -10,12 +11,12 @@ import hotdog from "./assets/images/carousel/hotdog.jpg";
 import tacos from "./assets/images/carousel/tacos.jpg";
 
 
-export function createMenu() {
+export function createMenu(e) {
     if (document.querySelector(".carousel"))
         return
 
     const contentDiv = document.querySelector("#content")
-
+    highlight(e.target)
     removePrevPage()
     const cards = []
     cards.push(createCard(burger1, "Cyber Patty", "Бургер с 'кибер-котлетой' из синтетического мяса"))
