@@ -19,13 +19,13 @@ export function createMenu(e) {
     highlight(e.target)
     removePrevPage()
     const cards = []
-    cards.push(createCard(burger1, "Cyber Patty", "Бургер с 'кибер-котлетой' из синтетического мяса"))
-    cards.push(createCard(chips, "Quantum fries", "Картофель фри, облитый флуоресцентным соусом"))
-    cards.push(createCard(hotdog, "NeuroDog", "Хот-дог с добавками, которые стимулируют мозг"))
-    cards.push(createCard(burger2, "Neon Stack", "Яркий, как неоновые огни ночного города"))
-    cards.push(createCard(tacos, "Glitch Wrap", "Буррито с такой острой начинкой, что зависнет мозг"))
-    cards.push(createCard(burger3, "HoloBurger", "Настолько технологичный, что выглядит как голограмма"))
-    cards.push(createCard(donut, "Cyber Glaze", "Пончик, покрытый глазурью, 'которая светится' в темноте"))
+    cards.push(createCard(burger1, "Cyber Patty", "A burger with a 'cyber-patty' made from synthetic meat"))
+    cards.push(createCard(chips, "Quantum fries", "Fries drenched in fluorescent sauce"))
+    cards.push(createCard(hotdog, "NeuroDog", "A hot dog with brain-boosting additives"))
+    cards.push(createCard(burger2, "Neon Stack", "A burger as vibrant as the neon lights of a night city"))
+    cards.push(createCard(tacos, "Glitch Wrap", "A burrito with a filling so spicy it’ll crash your mind"))
+    cards.push(createCard(burger3, "HoloBurger", "A burger so advanced it looks like a hologram"))
+    cards.push(createCard(donut, "Cyber Glaze", "A donut glazed with frosting that glows in the dark"))
  
     contentDiv.append(createCarousel(cards))
 }
