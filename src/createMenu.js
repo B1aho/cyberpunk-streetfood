@@ -11,6 +11,9 @@ import tacos from "./assets/images/carousel/tacos.jpg";
 
 
 export function createMenu() {
+    if (document.querySelector(".carousel"))
+        return
+
     const contentDiv = document.querySelector("#content")
 
     removePrevPage()

@@ -4,6 +4,9 @@ import cocktail from "./assets/images/cocktail-1.png";
 import logo from "./assets/images/neon-logo.png";
 
 export function createHome() {
+    if (document.querySelector("#home-main"))
+        return
+    
     const contentDiv = document.querySelector("#content")
     removePrevPage()
     const main = document.createElement("div")

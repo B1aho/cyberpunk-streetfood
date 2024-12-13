@@ -1,8 +1,10 @@
 import { removePrevPage } from "./removePrevPage";
 
 export function createContact() {
-    const contentDiv = document.querySelector("#content")
+    if (document.querySelector("#about-wrap"))
+        return
 
+    const contentDiv = document.querySelector("#content")
     removePrevPage()
     const textWrapper = document.createElement("div")
     textWrapper.id = "about-wrap"

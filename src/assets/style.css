@@ -98,6 +98,17 @@ body {
 	border-radius: 3px;
 }
 
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  width: 80%;
+  margin: 30px auto;
+  border: 1px solid rgba(255, 255, 255, 0.662);
+}
+
 footer {
   display: flex;
   min-width: 100%;
