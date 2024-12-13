@@ -10,7 +10,7 @@ export function createContact() {
     const header = document.createElement("h1")
     header.innerText = "Contact Us: Connecting the Neon Grid"
     const welcome = document.createElement("p")
-    welcome.innerText = "Welcome to 2088, where flavors meet the future! Got a question, craving, or just want to send a digital high-five? Our neon-drenched network is always open for you."
+    welcome.innerText = "Welcome to 2108, where flavors meet the future! Got a question, craving, or just want to send a digital high-five? Our neon-drenched network is always open for you."
     const reachUs = document.createElement("h3")
     reachUs.innerText = "Reach Us Via:"
     const reachUsP = document.createElement("p")
@@ -19,7 +19,7 @@ export function createContact() {
     warning.innerText = "Warning:"
     const warningP = document.createElement("p")
     warningP.innerText = "Sending us messages via retro tech like email may result in delays. Upgrade your comms, citizen!\n\nThe future tastes better when we’re connected. See you in the grid✨"
-
-    textWrapper.append(header,welcome, reachUs, reachUsP, warning, warningP)
+    
+    textWrapper.append(header,welcome, document.createElement("hr") ,reachUs, reachUsP, document.createElement("hr"), warning, warningP)
     contentDiv.append(textWrapper)
 };
