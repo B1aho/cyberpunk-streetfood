@@ -11,6 +11,7 @@ export function createHome() {
     const contentDiv = document.querySelector("#content")
     removePrevPage()
     const main = document.createElement("div")
+    main.classList.add("page")
     main.id = "home-main"
     // Create home page description
     const descCard = document.createElement("div")

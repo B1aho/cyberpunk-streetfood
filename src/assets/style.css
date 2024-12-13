@@ -77,7 +77,10 @@ body {
   color: aliceblue;
 }
 
-:root {}
+:root {
+  --hr-booking: #ff00aa;
+  --form-width: 40vw;
+}
 
 #home-main {
   padding: 20px;
@@ -185,13 +188,6 @@ body {
   }
 }
 
-/* #neon-logo::after {
-  content: url("./images/soda-2.png");
-  display: block;
-  width: 10%;
-
-} */
-
 .carousel {
   scroll-behavior: smooth;
   padding: 2rem;
@@ -236,18 +232,6 @@ body {
   border-radius: 3px;
 }
 
-
-#form {
-  display: flex;
-  flex-direction: column;
-}
-
-hr {
-  width: 80%;
-  margin: 30px auto;
-  border: 1px solid rgba(255, 255, 255, 0.662);
-}
-
 .carousel img {
   -webkit-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.25);
@@ -255,7 +239,96 @@ hr {
 }
 
 .carousel h1 {
-  text-shadow: 0 0 5px #FFF, 0 0 15px #FFF, 0 0 30px #49FF18, 0 0 55px #49FF18, 0px -1px 8px rgba(255,255,255,0);
+  text-shadow: 0 0 5px #FFF, 0 0 15px #FFF, 0 0 30px #ff7d7d, 0 0 55px #ff7d7d, 0px -1px 8px rgba(255,255,255,0);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: var(--form-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+
+
+
+#form input, select {
+  width: var(--form-width);
+  background-color: #ffffffe0;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: #4E008F;
+}
+
+#form input:focus{
+  outline: none;
+}
+
+#delivery {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+#delivery-heading {
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.wrap-delivery {
+  display: flex;
+  width: var(--form-width);
+  justify-content: space-between;
+}
+
+.wrap-delivery label {
+  min-width: 70%;
+}
+
+.wrap-delivery input {
+  min-width: 50%;
+  accent-color: 4E008F;
+}
+
+#agreement-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--form-width);
+}
+
+#agreement-wrap label {
+  font-size: 0.8rem;
+  min-width: 80%;
+  margin-right: 10%;
+}
+
+#agreement-wrap input {
+  scale: 1.5;
+  accent-color: 4E008F;
+}
+
+#form hr {
+  width: var(--form-width);
+  margin: 10px 0;
+  color: var(--hr-booking);
+  background-color: var(--hr-booking);
+  border-color: var(--hr-booking);
+}
+
+#form button {
+  width: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  width: 80%;
+  margin: 30px auto;
+  border: 1px solid rgba(255, 255, 255, 0.662);
 }
 
 footer {

@@ -36,7 +36,7 @@ export function createCarousel(cards) {
 
         }
     }
-
+    carouselWrapper.classList.add("page")
 
     return carouselWrapper
 }

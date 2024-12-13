@@ -1,4 +1,5 @@
 import { removePrevPage } from "./removePrevPage";
+import { hr } from "./hr";
 
 export function createBooking() {
     const contentDiv = document.querySelector("#content")
@@ -12,7 +13,7 @@ export function createBooking() {
 // Form creation
 const createOrderForm = () => {
     // Create form div
-    const form = document.createElement('div')
+    const form = document.createElement('form')
     form.id = 'form'
   
     const nameLabel = document.createElement('label')
@@ -53,7 +54,8 @@ const createOrderForm = () => {
   
     const deliveryLabel = document.createElement('label')
     deliveryLabel.setAttribute('for', 'delivery')
-    deliveryLabel.textContent = 'Delivery Method'
+    deliveryLabel.textContent = 'Delivery Method:'
+    deliveryLabel.id = "delivery-heading"
   
     const deliveryDiv = document.createElement('div')
     deliveryDiv.id = 'delivery'
@@ -73,8 +75,10 @@ const createOrderForm = () => {
       checkbox.id = option.id
       checkbox.value = option.value
       checkbox.name = 'delivery'
-  
-      deliveryDiv.append(optionLabel, checkbox)
+      const wrapDelivery = document.createElement("div")
+      wrapDelivery.classList.add("wrap-delivery")
+      wrapDelivery.append(optionLabel, checkbox)
+      deliveryDiv.append(wrapDelivery)
     });
   
     const agreementCheckbox = document.createElement('input')
@@ -85,37 +89,23 @@ const createOrderForm = () => {
   
     const agreementLabel = document.createElement('label')
     agreementLabel.setAttribute('for', 'agreement')
-    agreementLabel.textContent = '"I consent to a Neon Bites operator contacting me through NeuroLink to refine my order preferences, diving deep into the depths of my subconscious culinary desires."'
-  
-    form.append(nameLabel, nameInput, neuroLabel, neuroInput, locationLabel, locationSelect, deliveryLabel, deliveryDiv, agreementCheckbox, agreementLabel)
+    agreementLabel.textContent = '"I consent to a "Neon Grill" operator contacting me through NeuroLink to refine my order preferences, diving deep into the depths of my subconscious culinary desires."'
+
+    const agreementDiv = document.createElement("div")
+    agreementDiv.id = "agreement-wrap"
+    agreementDiv.append(agreementLabel, agreementCheckbox)
+    
+    const button = document.createElement("button")
+    button.textContent = "Submit!"
+    button.type = "submit"
+    form.onsubmit = (e) => {
+      return false
+    }
+
+    form.append(nameLabel, nameInput, hr(), neuroLabel, neuroInput, hr(), locationLabel, locationSelect,hr(), deliveryLabel, deliveryDiv, hr(), agreementDiv, button)
+    form.classList.add("page")
     return form;
   };
   
   // Вызов функции для создания формы
   createOrderForm();
-  
-
-/*
-<div id="form" style="display: none;">
-            <label for="name">Name</label>
-            <input type="text" id="name">
-            <label for="NeuroLink">NeuroLink ID</label>
-            <input type="number" required>
-            <label for="location">Delivery Location (Sector/Block)</label>
-            <select>
-                <option value="1">Sector 1</option>
-                <option value="2">Sector 2</option>
-                <option value="3">Sector 3</option>
-                <option value="311">Block 311</option>
-            </select>
-            <label for="delivery">Delivery Method</label>
-            <div id="delivery">
-                <label for="drone">Drone Delivery</label>
-                <input type="checkbox" id="drone" value="drone" name="delivery">
-                <label for="self">Pick Up at Sector 9</label>
-                <input type="checkbox" id="self" value="self" name="delivery">
-            </div>
-            <input type="checkbox" name="agreement" id="agreement" required>
-            <label for="agreement">"I consent to a Neon Bites operator contacting me through NeuroLink to refine my order preferences, diving deep into the depths of my subconscious culinary desires."</label>
-        </div>
-*/

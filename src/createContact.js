@@ -9,6 +9,7 @@ export function createContact() {
     removePrevPage()
     const textWrapper = document.createElement("div")
     textWrapper.id = "about-wrap"
+    textWrapper.classList.add("page")
 
     const header = document.createElement("h1")
     header.innerText = "Contact Us: Connecting the Neon Grid"

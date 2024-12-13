@@ -1,6 +1,6 @@
 export function removePrevPage() {
     const contentDiv = document.querySelector("#content")
-    const prevPage = contentDiv.querySelector("div")
+    let prevPage = contentDiv.querySelector(".page")
     if (prevPage)
         prevPage.remove()
 }
