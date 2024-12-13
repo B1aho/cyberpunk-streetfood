@@ -9,7 +9,6 @@ export function createCarousel(imageNodes) {
         const desc = document.createElement("div")
         desc.classList.add("menu-card-desc")
         const descHeader = document.createElement("h1")
-        descHeader.innerText = "Cyber dish"
         descHeader.classList.add("menu-card-header")
         const descContent = document.createElement("h4")
         descContent.classList.add("menu-card-content")
@@ -61,14 +60,3 @@ export function createCarousel(imageNodes) {
 
     return carouselWrapper
 }
-
-/*
-<div class="card">
-        <img src="https://colorlib.com/preview/theme/seogo/img/case_study/1.png">
-        <div class="content">
-          <h1>Product Design</h1>
-          <h3>UI/UX, Design</h3>
-        </div>
-      </div>
-      
-      */

@@ -83,6 +83,8 @@ body {
 
 .menu-card-header {
   min-height: 300px;
+  color: aliceblue;
+  text-align: center;
 }
 
 .menu-card {
@@ -90,7 +92,6 @@ body {
 	display: flex;
   flex-direction: column;
 	border-radius: 3px;
-	font-size: 0;
 }
 
 footer {

@@ -1,10 +1,8 @@
-import { 
-    createAbout, 
-    createBooking, 
-    createContact, 
-    createHome, 
-    createMenu 
-} from "./createContent";
+import { createHome } from "./createHome";
+import { createAbout } from "./createAbout";
+import { createContact } from "./createContact";
+import { createBooking } from "./createBooking";
+import { createMenu } from "./createMenu";
 
 export const navTabs = {
     menu: {
