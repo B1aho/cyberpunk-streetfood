@@ -1,4 +1,5 @@
 import { removePrevPage } from "./removePrevPage";
+import { hr } from "./hr";
 
 export function createContact() {
     if (document.querySelector("#about-wrap"))
@@ -22,6 +23,6 @@ export function createContact() {
     const warningP = document.createElement("p")
     warningP.innerText = "Sending us messages via retro tech like email may result in delays. Upgrade your comms, citizen!\n\nThe future tastes better when we’re connected. See you in the grid✨"
     
-    textWrapper.append(header,welcome, document.createElement("hr") ,reachUs, reachUsP, document.createElement("hr"), warning, warningP)
+    textWrapper.append(header,welcome, hr(), reachUs, reachUsP, hr(), warning, warningP)
     contentDiv.append(textWrapper)
 };

@@ -50,6 +50,7 @@ body {
     background: radial-gradient(circle, #10014C 0%, #4E008F 89%);
     background-attachment: fixed;
     overscroll-behavior: none; /* Change for mobiles*/
+    color: aliceblue;
 }
 
 :root { 
@@ -57,23 +58,41 @@ body {
 
 #home-main {
   display: flex;
+  max-height: 70vh;
+}
+
+.home-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-description {
+  background-color: rgba(255, 125, 222, 0.58);
+  height: fit-content;
 }
 
 .home-description h1, .home-description h2 {
   text-align: center;
 }
 
+.home-description p {
+  text-align: center;
+}
+
 #cocktail {
-  position: relative;
-  bottom: 40%;
-  width: 80%;
+  /* position: relative; 
+  bottom: 140%; 
+  left: 30%;
+  width: 65%; */
   rotate: 20deg;
+  z-index: -1;
 }
 
 #neon-logo {
-  position: relative;
-  top: -15%;
-  left: -10%;
+  /* position: relative;
+  top: -35%;
+  left: -15%;  */
+  rotate: -5deg;
 }
 
 .carousel {
