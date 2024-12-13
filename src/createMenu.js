@@ -9,9 +9,10 @@ import donut from "./assets/images/carousel/donut.jpg";
 import hotdog from "./assets/images/carousel/hotdog.jpg";
 import tacos from "./assets/images/carousel/tacos.jpg";
 
-const contentDiv = document.querySelector("#content")
 
 export function createMenu() {
+    const contentDiv = document.querySelector("#content")
+
     removePrevPage()
     const cards = []
     cards.push(createCard(burger1, "Cyber Patty", "Бургер с 'кибер-котлетой' из синтетического мяса"))
