@@ -80,6 +80,29 @@ body {
 :root {
   --hr-booking: #ff00aa;
   --form-width: 40vw;
+  --neon-shadow: 0 0 5px #FFF, 0 0 15px #FFF, 0 0 30px #ff7d7d, 0 0 55px #ff7d7d, 0px -1px 8px rgba(255,255,255,0);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+nav button {
+  font-weight: 400;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: aliceblue;
+  border: none;
+}
+
+nav button:hover {
+  cursor: pointer;
+  scale: 1.1;
 }
 
 #home-main {
@@ -239,7 +262,7 @@ body {
 }
 
 .carousel h1 {
-  text-shadow: 0 0 5px #FFF, 0 0 15px #FFF, 0 0 30px #ff7d7d, 0 0 55px #ff7d7d, 0px -1px 8px rgba(255,255,255,0);
+  text-shadow: var(--neon-shadow);
 }
 
 #form {
@@ -329,6 +352,24 @@ hr {
   width: 80%;
   margin: 30px auto;
   border: 1px solid rgba(255, 255, 255, 0.662);
+}
+
+#about-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+#about-wrap h1, #about-wrap h3 {
+  text-align: center;
+}
+
+#about-wrap h1 {
+  text-shadow: var(--neon-shadow);
+}
+
+#warning-p {
+  text-align: center;
 }
 
 footer {

@@ -23,6 +23,7 @@ export function createContact() {
     warning.innerText = "Warning:"
     const warningP = document.createElement("p")
     warningP.innerText = "Sending us messages via retro tech like email may result in delays. Upgrade your comms, citizen!\n\nThe future tastes better when we’re connected. See you in the grid✨"
+    warningP.id = "warning-p"
     
     textWrapper.append(header,welcome, hr(), reachUs, reachUsP, hr(), warning, warningP)
     contentDiv.append(textWrapper)
